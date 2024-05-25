@@ -4,3 +4,31 @@
   padding: 2rem;
   text-align: center;
 }
+.item{
+    width: 40px;
+    height: 40px;
+    background-color: #625757;
+    margin: 2px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.game-field{
+    width: 300px;
+    height: 300px;
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border: rgba(36, 36, 36, 0.35) solid 1px;
+    background-color: rgba(122, 122, 122, 0.62);
+}
+.open{
+    background-color: #fff;
+}
