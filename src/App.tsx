@@ -29,7 +29,23 @@ function App() {
     const [tries, setTries] = useState<number>(0);
     const [game, setGame] = useState<boolean>(true);
 
-
+    const onItemClick = (position: number) => {
+        if (!items[position].clicked && game) {
+            setItems(prevState => {
+                return prevState.map((item, index) => {
+                    if (index === position) {
+                        return {...item, clicked: !item.clicked};
+                    } else {
+                        return {...item};
+                    }
+                });
+            });
+            setTries(prevState => {return prevState+1})
+            if(items[position].hasItem){
+               setGame(!game)
+            }
+        }
+    };
     const onClickReset= ()=>{
         setItems(initialItems)
         setTries(0);
@@ -38,7 +54,7 @@ function App() {
     return (
         <>
             <GameField children={items.map((el,index)=>{
-                    return <FieldItem />
+                    return <FieldItem hasItem={el.hasItem} clickOnItem={()=>onItemClick(index)} clicked={el.clicked} index={index} key={index}/>
                 })}/>
             <Counter count={tries}/>
             <Buttons onResetClick={onClickReset}/>
