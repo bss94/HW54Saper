@@ -4,7 +4,7 @@ import Counter from './components/Counter/Counter.tsx';
 import Buttons from './components/Buttons/Buttons.tsx';
 import GameField from './components/GameField/GameField.tsx';
 import FieldItem from './components/FieldItem/FieldItem.tsx';
-import EndGame from './components/EndGame.tsx';
+import EndGame from './components/EndGame/EndGame.tsx';
 
 
 interface Items {
