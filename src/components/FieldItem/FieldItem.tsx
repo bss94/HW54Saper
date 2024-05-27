@@ -6,7 +6,13 @@ interface Props {
     clickOnItem: (position: number) => void;
     index: number;
 }
-const FieldItem: React.FC<Props> = ({hasItem, clickOnItem, index, clicked}) => {
+
+const FieldItem: React.FC<Props> = ({
+                                        hasItem,
+                                        clickOnItem,
+                                        index,
+                                        clicked
+                                    }) => {
     const itemClass = ['item'];
     const spanStyle = {
         display: 'none'

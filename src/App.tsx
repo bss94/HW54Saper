@@ -57,8 +57,11 @@ function App() {
     return (
         <>
             <GameField children={items.map((el, index) => {
-                return <FieldItem hasItem={el.hasItem} clickOnItem={() => onItemClick(index)} clicked={el.clicked}
-                                  index={index} key={index}/>;
+                return <FieldItem hasItem={el.hasItem}
+                                  clickOnItem={() => onItemClick(index)}
+                                  clicked={el.clicked}
+                                  index={index}
+                                  key={index}/>;
             })}/>
             <EndGame game={game}/>
             <Counter count={tries}/>
